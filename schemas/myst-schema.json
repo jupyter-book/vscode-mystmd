@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MyST Config",
+  "description": "Schema for validating a specific YAML structure",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number",
+      "description": "The version of the entity",
+      "const": 1
+    },
+    "project": {
+      "type": "object",
+      "description": "Details of the project.",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the project."
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "The subtitle of the project."
+        },
+        "license": {
+          "description": "The license information, which can be either a string or an object with `code` and `content`.",
+          "default": "CC-BY-4.0",
+          "oneOf": [
+            {
+              "type": "string",
+              "description": "The license specified as a simple string."
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "description": "The license code, such as MIT, GPL, etc.",
+                  "default": "MIT"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "Detailed content or description of the license.",
+                  "default": "CC-BY-4.0"
+                }
+              },
+              "required": ["code", "content"],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": true
+    },
+    "site": {
+      "type": "object",
+      "description": "Details of the site configuration.",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The title of the site."
+        },
+        "domains": {
+          "type": "array",
+          "description": "A list of domains associated with the site.",
+          "items": {
+            "type": "string",
+            "format": "hostname",
+            "description": "A domain name associated with the site."
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": true
+    }
+  },
+  "required": ["version", "project"]
+}

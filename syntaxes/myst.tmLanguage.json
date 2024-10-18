@@ -1,0 +1,63 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "text.mystmarkdown",
+  "name": "MyST Markdown",
+  "patterns": [
+    {
+      "name": "entity.name.tag.myst",
+      "match": "\\B@([a-zA-Z0-9_:]+)"
+    },
+    {
+      "include": "#directive"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.myst",
+          "match": "\\b(if|while|for|return)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.myst",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.myst",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "directive": {
+      "name": "meta.block.colon-fence.myst",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})\\{([\\:\\-\\_0-9a-zA-A]*)\\}(.*)",
+      "beginCaptures": {
+        "1": { "name": "punctuation.definition.block.myst" },
+        "4": { "name": "entity.name.function" },
+        "5": { "name": "string.unquoted.attribute.myst" }
+      },
+      "end": "(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$",
+      "endCaptures": {
+        "3": {
+          "name": "punctuation.definition.block.myst"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.block.attribute.myst",
+          "match": "^\\s*:([a-zA-Z][\\:\\-\\_0-9a-zA-Z]*):\\s*(.*)$",
+          "captures": {
+            "1": { "name": "variable.parameter" },
+            "2": { "name": "string.unquoted.attribute.myst" }
+          }
+        },
+        {
+          "include": "text.mystmarkdown"
+        }
+      ]
+    }
+  }
+}
