@@ -19,6 +19,44 @@ repository:
   #   patterns:
   #     - name: 'constant.character.escape.myst'
   #       match: '\\.'
+  block:
+    patterns:
+      - include: '#separator'
+      - include: '#heading'
+      - include: '#blockquote'
+      - include: '#lists'
+      - include: '#code_cell'
+      - include: '#directive'
+      - include: '#fenced_code_block'
+      - include: '#raw_block'
+      - include: '#link-def'
+      - include: '#html'
+      - include: '#table'
+      - include: '#paragraph'
+  code_cell:
+    patterns: []
+  code_cell_unknown:
+    name: 'meta.block.code-cell.myst'
+    begin: '(^|\G)([ ]{0,3})([`:]{3,})\{code-cell\}(.*)'
+    beginCaptures:
+      '1':
+        name: 'punctuation.definition.block.myst'
+      '4':
+        name: 'entity.name.function'
+      '5':
+        name: 'string.unquoted.attribute.myst'
+    end: '(^|\G)(\2|\s{0,3})(\3)\s*$'
+    endCaptures:
+      '3':
+        name: 'punctuation.definition.block.myst'
+    patterns:
+      - name: 'meta.block.attribute.myst'
+        match: '^\s*:([a-zA-Z][\:\-\_0-9a-zA-Z]*):\s*(.*)$'
+        captures:
+          '1':
+            name: 'variable.parameter'
+          '2':
+            name: 'string.unquoted.attribute.myst'
   directive:
     name: 'meta.block.colon-fence.myst'
     begin: '(^|\G)([ ]{0,3})([`:]{3,})\{([\:\-\_0-9a-zA-A]*)\}(.*)'
@@ -42,19 +80,6 @@ repository:
           '2':
             name: 'string.unquoted.attribute.myst'
       - include: 'text.mystmarkdown'
-  block:
-    patterns:
-      - include: '#separator'
-      - include: '#heading'
-      - include: '#blockquote'
-      - include: '#lists'
-      - include: '#directive'
-      - include: '#fenced_code_block'
-      - include: '#raw_block'
-      - include: '#link-def'
-      - include: '#html'
-      - include: '#table'
-      - include: '#paragraph'
   blockquote:
     begin: (^|\G)[ ]{0,3}(>) ?
     captures:

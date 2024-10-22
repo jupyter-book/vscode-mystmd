@@ -4,3 +4,25 @@
 [@asdf]
 :::
 
+
+```{code-cell} python
+def asdf():
+  return 6 * 7
+```
+
+:::{code-cell} r
+asdf <- function() {
+  return 6 * 7
+}
+:::
+
+```{code-cell} js
+:tags: remove-input
+
+const asdf = 42;
+```
+
+:::{code-cell} unknown
+:tags: remove-input
+
+:::
