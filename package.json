@@ -57,6 +57,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "vscode:prepublish": "npm run compile",
+    "compile": "node compile.mjs",
     "build": "tsc",
     "dev": "tsc -watch -p ./",
     "lint": "eslint \"src/**/!(*.spec).ts\" -c ./.eslintrc.cjs",

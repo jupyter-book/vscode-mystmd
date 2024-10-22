@@ -275,14 +275,16 @@ const fencedCodeBlockDefinition = (
   return [
     `fenced_code_block_${name}`,
     {
-      begin: `(^|\\G)(\\s*)(\`{3,}|~{3,})\\s*(?i:(${identifiers.join('|')})((\\s+|:|,|\\{|\\?)[^\`]*)?$)`,
       name: 'markup.fenced_code.block.markdown',
-      end: '(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$',
+      begin: `(^|\\G)(\\s*)(\`{3,}|~{3,})\\s*(?i:(${identifiers.join(
+        '|',
+      )})((\\s+|:|,|\\{|\\?)[^\`]*)?$)`,
       beginCaptures: {
         3: { name: 'punctuation.definition.markdown' },
         4: { name: 'fenced_code.block.language.markdown' },
         5: { name: 'fenced_code.block.language.attributes.markdown' },
       },
+      end: '(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$',
       endCaptures: {
         3: { name: 'punctuation.definition.markdown' },
       },
@@ -314,6 +316,70 @@ const fencedCodeBlockDefinitions = () =>
 const fencedCodeBlockIncludes = () =>
   languages.map((language) => ({ include: `#fenced_code_block_${language.name}` }));
 
+const codeCellDefinition = (name, identifiers, sourceScope, language, additionalContentName) => {
+  if (!Array.isArray(sourceScope)) {
+    sourceScope = [sourceScope];
+  }
+
+  language = language || name;
+
+  const scopes = sourceScope.map((scope) => ({ include: scope }));
+
+  let contentName = `meta.embedded.block.${language}`;
+  if (additionalContentName) {
+    contentName += ` ${additionalContentName.join(' ')}`;
+  }
+
+  return [
+    `code_cell_${name}`,
+    {
+      name: 'meta.block.code-cell.myst',
+      begin: `(^|\\G)([ ]{0,3})([\`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(${identifiers.join('|')}))`,
+      beginCaptures: {
+        1: { name: 'punctuation.definition.block.myst' },
+        4: { name: 'entity.name.function' },
+        5: { name: 'string.unquoted.attribute.myst' },
+      },
+      end: '(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$',
+      endCaptures: {
+        3: { name: 'punctuation.definition.block.myst' },
+      },
+      patterns: [
+        {
+          name: 'meta.block.attribute.myst',
+          match: '^\\s*:([a-zA-Z][\\:\\-\\_0-9a-zA-Z]*):\\s*(.*)$',
+          captures: {
+            1: { name: 'variable.parameter' },
+            2: { name: 'string.unquoted.attribute.myst' },
+          },
+        },
+        {
+          begin: '(^|\\G)(\\s*)(.*)',
+          while: '(^|\\G)(?!\\s*([`:]{3,})\\s*$)',
+          contentName: `${contentName}`,
+          patterns: scopes,
+        },
+      ],
+    },
+  ];
+};
+
+const codeCellDefinitions = () =>
+  Object.fromEntries(
+    languages.map((language) =>
+      codeCellDefinition(
+        language.name,
+        language.identifiers,
+        language.source,
+        language.language,
+        language.additionalContentName,
+      ),
+    ),
+  );
+
+const codeCellIncludes = () =>
+  languages.map((language) => ({ include: `#code_cell_${language.name}` }));
+
 const buildGrammar = () => {
   const syntaxDir = join(dirname(import.meta.url), 'syntaxes').replace('file:', '');
   const raw = load(readFileSync(join(syntaxDir, 'myst.tmLanguage.yml')).toString());
@@ -325,6 +391,10 @@ const buildGrammar = () => {
       ...fencedCodeBlockDefinitions(),
       fenced_code_block: {
         patterns: [...fencedCodeBlockIncludes(), { include: '#fenced_code_block_unknown' }],
+      },
+      ...codeCellDefinitions(),
+      code_cell: {
+        patterns: [...codeCellIncludes(), { include: '#code_cell_unknown' }],
       },
     },
   };
