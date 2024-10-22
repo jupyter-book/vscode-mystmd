@@ -3345,7 +3345,7 @@
     },
     "code_cell_css": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(css|css.erb))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(css|css.erb))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3390,7 +3390,7 @@
     },
     "code_cell_basic": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(html|htm|shtml|xhtml|inc|tmpl|tpl))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(html|htm|shtml|xhtml|inc|tmpl|tpl))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3435,7 +3435,7 @@
     },
     "code_cell_ini": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(ini|conf))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(ini|conf))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3480,7 +3480,7 @@
     },
     "code_cell_java": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(java|bsh))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(java|bsh))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3525,7 +3525,7 @@
     },
     "code_cell_lua": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(lua))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(lua))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3570,7 +3570,7 @@
     },
     "code_cell_makefile": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(Makefile|makefile|GNUmakefile|OCamlMakefile))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(Makefile|makefile|GNUmakefile|OCamlMakefile))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3615,7 +3615,7 @@
     },
     "code_cell_perl": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(perl|pl|pm|pod|t|PL|psgi|vcl))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(perl|pl|pm|pod|t|PL|psgi|vcl))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3660,7 +3660,7 @@
     },
     "code_cell_r": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(R|r|s|S|Rprofile|\\{\\.r.+?\\}))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(R|r|s|S|Rprofile|\\{\\.r.+?\\}))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3705,7 +3705,7 @@
     },
     "code_cell_ruby": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(ruby|rb|rbx|rjs|Rakefile|rake|cgi|fcgi|gemspec|irbrc|Capfile|ru|prawn|Cheffile|Gemfile|Guardfile|Hobofile|Vagrantfile|Appraisals|Rantfile|Berksfile|Berksfile.lock|Thorfile|Puppetfile))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(ruby|rb|rbx|rjs|Rakefile|rake|cgi|fcgi|gemspec|irbrc|Capfile|ru|prawn|Cheffile|Gemfile|Guardfile|Hobofile|Vagrantfile|Appraisals|Rantfile|Berksfile|Berksfile.lock|Thorfile|Puppetfile))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3750,7 +3750,7 @@
     },
     "code_cell_php": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(php|php3|php4|php5|phpt|phtml|aw|ctp))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(php|php3|php4|php5|phpt|phtml|aw|ctp))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3798,7 +3798,7 @@
     },
     "code_cell_sql": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(sql|ddl|dml))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(sql|ddl|dml))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3843,7 +3843,7 @@
     },
     "code_cell_vs_net": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(vb))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(vb))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3888,7 +3888,7 @@
     },
     "code_cell_xml": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(xml|xsd|tld|jsp|pt|cpt|dtml|rss|opml))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(xml|xsd|tld|jsp|pt|cpt|dtml|rss|opml))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3933,7 +3933,7 @@
     },
     "code_cell_xsl": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(xsl|xslt))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(xsl|xslt))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -3978,7 +3978,7 @@
     },
     "code_cell_yaml": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(yaml|yml))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(yaml|yml))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4023,7 +4023,7 @@
     },
     "code_cell_dosbatch": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(bat|batch))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(bat|batch))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4068,7 +4068,7 @@
     },
     "code_cell_clojure": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(clj|cljs|clojure))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(clj|cljs|clojure))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4113,7 +4113,7 @@
     },
     "code_cell_coffee": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(coffee|Cakefile|coffee.erb))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(coffee|Cakefile|coffee.erb))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4158,7 +4158,7 @@
     },
     "code_cell_c": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(c|h))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(c|h))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4203,7 +4203,7 @@
     },
     "code_cell_cpp": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(cpp|c\\+\\+|cxx))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(cpp|c\\+\\+|cxx))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4248,7 +4248,7 @@
     },
     "code_cell_diff": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(patch|diff|rej))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(patch|diff|rej))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4293,7 +4293,7 @@
     },
     "code_cell_dockerfile": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(dockerfile|Dockerfile))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(dockerfile|Dockerfile))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4338,7 +4338,7 @@
     },
     "code_cell_git_commit": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(COMMIT_EDITMSG|MERGE_MSG))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(COMMIT_EDITMSG|MERGE_MSG))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4383,7 +4383,7 @@
     },
     "code_cell_git_rebase": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(git-rebase-todo))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(git-rebase-todo))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4428,7 +4428,7 @@
     },
     "code_cell_go": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(go|golang))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(go|golang))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4473,7 +4473,7 @@
     },
     "code_cell_groovy": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(groovy|gvy))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(groovy|gvy))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4518,7 +4518,7 @@
     },
     "code_cell_pug": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(jade|pug))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(jade|pug))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4563,7 +4563,7 @@
     },
     "code_cell_js": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(js|jsx|javascript|es6|mjs|cjs|dataviewjs|\\{\\.js.+?\\}))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(js|jsx|javascript|es6|mjs|cjs|dataviewjs|\\{\\.js.+?\\}))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4608,7 +4608,7 @@
     },
     "code_cell_js_regexp": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(regexp))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(regexp))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4653,7 +4653,7 @@
     },
     "code_cell_json": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(json|json5|sublime-settings|sublime-menu|sublime-keymap|sublime-mousemap|sublime-theme|sublime-build|sublime-project|sublime-completions))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(json|json5|sublime-settings|sublime-menu|sublime-keymap|sublime-mousemap|sublime-theme|sublime-build|sublime-project|sublime-completions))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4698,7 +4698,7 @@
     },
     "code_cell_jsonc": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(jsonc))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(jsonc))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4743,7 +4743,7 @@
     },
     "code_cell_less": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(less))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(less))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4788,7 +4788,7 @@
     },
     "code_cell_objc": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(objectivec|objective-c|mm|objc|obj-c|m|h))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(objectivec|objective-c|mm|objc|obj-c|m|h))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4833,7 +4833,7 @@
     },
     "code_cell_swift": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(swift))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(swift))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4878,7 +4878,7 @@
     },
     "code_cell_scss": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(scss))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(scss))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4923,7 +4923,7 @@
     },
     "code_cell_perl6": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(perl6|p6|pl6|pm6|nqp))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(perl6|p6|pl6|pm6|nqp))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -4968,7 +4968,7 @@
     },
     "code_cell_powershell": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(powershell|ps1|psm1|psd1|pwsh))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(powershell|ps1|psm1|psd1|pwsh))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5013,7 +5013,7 @@
     },
     "code_cell_python": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(python|py|py3|rpy|pyw|cpy|SConstruct|Sconstruct|sconstruct|SConscript|gyp|gypi|\\{\\.python.+?\\}))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(python|py|py3|rpy|pyw|cpy|SConstruct|Sconstruct|sconstruct|SConscript|gyp|gypi|\\{\\.python.+?\\}))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5058,7 +5058,7 @@
     },
     "code_cell_julia": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(julia|\\{\\.julia.+?\\}))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(julia|\\{\\.julia.+?\\}))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5103,7 +5103,7 @@
     },
     "code_cell_regexp_python": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(re))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(re))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5148,7 +5148,7 @@
     },
     "code_cell_rust": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(rust|rs|\\{\\.rust.+?\\}))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(rust|rs|\\{\\.rust.+?\\}))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5193,7 +5193,7 @@
     },
     "code_cell_scala": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(scala|sbt))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(scala|sbt))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5238,7 +5238,7 @@
     },
     "code_cell_shell": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(shell|sh|bash|zsh|bashrc|bash_profile|bash_login|profile|bash_logout|.textmate_init|\\{\\.bash.+?\\}))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(shell|sh|bash|zsh|bashrc|bash_profile|bash_login|profile|bash_logout|.textmate_init|\\{\\.bash.+?\\}))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5283,7 +5283,7 @@
     },
     "code_cell_ts": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(typescript|ts))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(typescript|ts))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5328,7 +5328,7 @@
     },
     "code_cell_tsx": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(tsx))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(tsx))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5373,7 +5373,7 @@
     },
     "code_cell_csharp": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(cs|csharp|c#))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(cs|csharp|c#))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5418,7 +5418,7 @@
     },
     "code_cell_fsharp": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(fs|fsharp|f#))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(fs|fsharp|f#))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5463,7 +5463,7 @@
     },
     "code_cell_dart": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(dart))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(dart))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5508,7 +5508,7 @@
     },
     "code_cell_handlebars": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(handlebars|hbs))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(handlebars|hbs))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5553,7 +5553,7 @@
     },
     "code_cell_markdown": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(markdown|md))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(markdown|md))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5598,7 +5598,7 @@
     },
     "code_cell_log": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(log))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(log))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5643,7 +5643,7 @@
     },
     "code_cell_erlang": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(erlang))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(erlang))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5688,7 +5688,7 @@
     },
     "code_cell_elixir": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(elixir))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(elixir))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5733,7 +5733,7 @@
     },
     "code_cell_latex": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(latex|tex))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(latex|tex))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5778,7 +5778,7 @@
     },
     "code_cell_bibtex": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(bibtex))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(bibtex))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"
@@ -5823,7 +5823,7 @@
     },
     "code_cell_twig": {
       "name": "meta.block.code-cell.myst",
-      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{code-cell\\})\\s*(?i:(twig))",
+      "begin": "(^|\\G)([ ]{0,3})([`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(twig))",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.block.myst"

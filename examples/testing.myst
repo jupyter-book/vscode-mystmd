@@ -26,3 +26,8 @@ const asdf = 42;
 :tags: remove-input
 
 :::
+
+
+:::{code} yaml
+title: hello
+:::

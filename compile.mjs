@@ -334,7 +334,7 @@ const codeCellDefinition = (name, identifiers, sourceScope, language, additional
     `code_cell_${name}`,
     {
       name: 'meta.block.code-cell.myst',
-      begin: `(^|\\G)([ ]{0,3})([\`:]{3,})(\\{code-cell\\})\\s*(?i:(${identifiers.join('|')}))`,
+      begin: `(^|\\G)([ ]{0,3})([\`:]{3,})(\\{(?:code|code-cell|code-block|sourcecode)\\})\\s*(?i:(${identifiers.join('|')}))`,
       beginCaptures: {
         1: { name: 'punctuation.definition.block.myst' },
         4: { name: 'entity.name.function' },
